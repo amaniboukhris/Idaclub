@@ -1,0 +1,144 @@
+body {
+  background-color: #f2f2f2;
+
+}
+
+*{
+/* A universal CSS reset */
+margin:0;
+padding:0;
+
+}
+
+
+
+#navigationMenu li{
+list-style:none;
+height:39px;
+padding:0px;
+width:40px;
+}
+
+#navigationMenu span{
+/* Container properties */
+width:0;
+left:38px;
+padding:0;
+position:absolute;
+overflow:hidden;
+
+/* Text properties */
+font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
+font-size:18px;
+font-weight:bold;
+letter-spacing:0.6px;
+white-space:nowrap;
+line-height:33px;
+
+/* CSS3 Transition: */
+-webkit-transition: 0.25s;
+
+/* Future proofing (these do not work yet): */
+-moz-transition: 0.25s;
+transition: 0.25s;
+}
+
+#navigationMenu a{
+
+height:32px;
+width:33px;
+display:block;
+position:relative;
+}
+
+/* General hover styles */
+
+#navigationMenu a:hover span{ width:auto; padding:0 20px;overflow:visible; }
+#navigationMenu a:hover{
+text-decoration:none;
+
+/* CSS outer glow with the box-shadow property */
+-moz-box-shadow:0 0 5px #9ddff5;
+-webkit-box-shadow:0 0 5px #9ddff5;
+box-shadow:0 0 5px #9ddff5;
+}
+
+/* Green Button */
+
+#navigationMenu .home { background:url('../../assets/images/fb1.png') no-repeat;}
+#navigationMenu .home:hover {	background:url('../../assets/images/fb1.png') no-repeat;}
+#navigationMenu .home span{
+background-color:#1e8bb4;
+color:#3d4f0c;
+text-shadow:1px 1px 0 #99bf31;
+}
+
+/* Blue Button */
+
+#navigationMenu .about {  background:url('../../assets/images/li1.png') no-repeat; }
+#navigationMenu .about:hover { background:url('../../assets/images/li1.png') no-repeat;}
+#navigationMenu .about span{
+background-color:#1e8bb4;
+color:#223a44;
+text-shadow:1px 1px 0 #44a8d0;
+}
+
+/* Orange Button */
+
+#navigationMenu .services { background:url('../../assets/images/pin1.png') no-repeat;}
+#navigationMenu .services:hover { background:url('../../assets/images/pin1.png') no-repeat;}
+#navigationMenu .services span{
+background-color:#c86c1f;
+color:#5a3517;
+text-shadow:1px 1px 0 #d28344;
+}
+
+/* Yellow Button */
+
+#navigationMenu .portfolio { background:url('../../assets/images/tm1.png') no-repeat;}
+#navigationMenu .portfolio:hover{ background:url('../../assets/images/tm1.png') no-repeat;}
+#navigationMenu .portfolio span{
+background-color:#d0a525;
+color:#604e18;
+text-shadow:1px 1px 0 #d8b54b;
+}
+
+/* Purple Button */
+
+#navigationMenu .contact { background:url('../../assets/images/tw1.png') no-repeat;}
+#navigationMenu .contact:hover { background:url('../../assets/images/tw1.png') no-repeat;}
+#navigationMenu .contact span{
+background-color:#af1e83;
+color:#460f35;
+text-shadow:1px 1px 0 #d244a6;
+}
+
+/* The styles below are only needed for the demo page */
+
+#main{
+margin-right:80px;
+margin-top:12%;
+
+position:fixed;
+width:40px;
+}
+
+
+
+
+
+
+a, a:visited,a:active {
+color:#0196e3;
+text-decoration:none;
+outline:none;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+a img{
+border:none;
+}
+

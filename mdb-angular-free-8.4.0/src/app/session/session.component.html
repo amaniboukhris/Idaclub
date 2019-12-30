@@ -1,0 +1,100 @@
+<body>
+  
+
+<div class="container">
+
+<h1>Gerer Session</h1>
+
+
+   
+
+    <form class="module"  (ngSubmit)="!sessionForm.invalid && saveSession()" #sessionForm="ngForm" >
+   
+        <fieldset class="md-form">
+            <mdb-icon fas icon="file-signature"></mdb-icon>
+            <label >Titre</label>
+            <input mdbInput mdbValidate type="text" [(ngModel)]="sess.titre"
+            class="form-control" 
+            name="titre" [(ngModel)]="pattern" #input="ngModel" required [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" size="10">
+          <mdb-error *ngIf="input.invalid && (input.dirty || input.touched)">Veuillez fournir un titre valide.</mdb-error>
+          <mdb-success *ngIf="input.valid && (input.dirty || input.touched)">titre valide</mdb-success>
+
+        </fieldset>
+ 
+
+
+        <fieldset class="md-form">
+            <mdb-icon fas icon="file-signature"></mdb-icon>
+                <label>Formation</label>
+                <input  mdbInput mdbValidate type="text" [(ngModel)]="sess.formation"
+                class="form-control" 
+                name="formation" [(ngModel)]="pattern" #formation="ngModel" required [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" >
+                <mdb-error *ngIf="formation.invalid && (formation.dirty || formation.touched)">Veuillez fournir un nom de formation valide.</mdb-error>
+          <mdb-success *ngIf="formation.valid && (formation.dirty || formation.touched)">Formation valid</mdb-success>
+
+            </fieldset>
+            <fieldset class="md-form">
+                <mdb-icon fas icon="hourglass-half"></mdb-icon>
+                    <label>nbreHeures</label>
+                    <input mdbInput mdbValidate type="text" [(ngModel)]="sess.nbreHeures"
+                    class="form-control" 
+                    name="nbreHeures" [(ngModel)]="pattern" #nbreHeures="ngModel" required [pattern]="'[0-9]*'" >
+                    <mdb-error *ngIf="nbreHeures.invalid && (nbreHeures.dirty || nbreHeures.touched)">Input invalid</mdb-error>
+              <mdb-success *ngIf="nbreHeures.valid && (nbreHeures.dirty || nbreHeures.touched)">Input valid</mdb-success>
+    
+                </fieldset>
+                <fieldset class="md-form">
+                    <mdb-icon fas icon="users"></mdb-icon>
+                        <label>Effectif</label>
+                        <input mdbInput mdbValidate type="text" [(ngModel)]="sess.effectif"
+                        class="form-control" 
+                        name="effectif" [(ngModel)]="pattern" #effectif="ngModel"   required [pattern]="'[0-9]*'" >
+                        <mdb-error *ngIf="effectif.invalid && (effectif.dirty || effectif.touched)">Veuillez fournir un effectif valide.</mdb-error>
+                  <mdb-success *ngIf="effectif.valid && (effectif.dirty || effectif.touched)">effectif valid</mdb-success>
+        
+                    </fieldset>
+                    
+        <fieldset class="md-form">
+            <mdb-icon fas icon="file-signature"></mdb-icon>
+                <label>Programme</label>
+                <input  mdbInput mdbValidate type="text" [(ngModel)]="sess.programme"
+                class="form-control" 
+                name="programme"[(ngModel)]="pattern" #programme="ngModel">
+                <mdb-error *ngIf="programme.invalid && (programme.dirty || programme.touched)">Veuillez fournir un nom de session valide.</mdb-error>
+          <mdb-success *ngIf="programme.valid && (programme.dirty || programme.touched)">nom de session valid</mdb-success>
+
+            </fieldset>
+            <fieldset class="md-form">
+                <mdb-icon fas icon="hand-holding-usd"></mdb-icon>
+                    <label>Prix</label>
+                    <input mdbInput mdbValidate  type="text" [(ngModel)]="sess.prix"
+                    class="form-control" 
+                    name="prix" #prix="ngModel" required [pattern]="'[0-9]*'" >
+                    <mdb-error *ngIf="prix.invalid && (prix.dirty || prix.touched)">Veuillez fournir un prix valide.</mdb-error>
+              <mdb-success *ngIf="prix.valid && (prix.dirty || prix.touched)">Prix valid</mdb-success>
+    
+                </fieldset>
+
+
+
+                
+            
+                      <label for="file">Photo de session</label>
+                      <input type="file"  accept ="image/*" (change)="OnSelectFile($event)" multiple>
+             
+                
+
+
+
+        <button type="submit" class="btn btn-primary" > Save </button>
+        <button type="reset" class="btn btn-danger">Cancel</button>
+        <button class="rt" routerLink="/sessions"> <img src="../../assets/images/icons8-back-arrow-40.png"></button>
+
+
+       
+
+
+    </form>
+</div>
+</body>
+

@@ -1,0 +1,66 @@
+.ng-invalid:not(form){
+
+    border-left: 2px solid red;
+}
+
+label{
+    padding: 8px;
+    color: black;
+}
+input {
+    size:10px;
+
+}
+
+body{
+  background-color:  #f2f2f2;
+
+}
+h1{
+  padding-top: 2%;
+	text-shadow: 3px 2px;
+	font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+
+}
+
+.module {
+  box-shadow: 1px 1px 12px #555;
+
+  max-width:1000px;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      rgb(9, 50, 230), 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+}
+
+button{
+  float: right;
+  margin-right: 5px;
+  width: 120px;
+  height: 50px;
+}
+@-webkit-keyframes autofill {
+  to {
+  color: #666;
+  background: transparent; } }
+  
+  @keyframes autofill {
+  to {
+  color: #666;
+  background: transparent; } }
+  
+  input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }

@@ -1,0 +1,22 @@
+
+<div class="modal-content text-center">
+
+  <div class="modal-header d-flex justify-content-center" class="p-3 mb-2 bg-danger text-white">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">×</span>
+    </button>
+    <h4  class="heading">Erreur d'inscription</h4>
+
+  </div>
+  <div class="modal-body">
+    <div class="modal-body">
+      <mdb-icon fas icon="times" size="4x" class="animated rotateIn red-text pr-3" ></mdb-icon>
+      <h5>Votre adresse <strong style="color: red;">email</strong> ou <strong style="color: red;">CIN </strong> est déjà utilisée par un autre utilisateur IDAC </h5>
+    </div>
+  </div>
+  <div class="modal-footer justify-content-center">
+      <button type="button" mdbBtn color="danger" class="waves-light" aria-label="Close" (click)="modalRef.hide()" mdbWavesEffect>fermer</button>
+
+  </div>
+  </div>
+ 

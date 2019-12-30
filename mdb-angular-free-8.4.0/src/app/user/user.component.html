@@ -1,0 +1,134 @@
+<h1>Gerer User</h1>
+
+<div class="container">
+
+    <form  class="module" (ngSubmit)="!userForm.invalid && saveUser()" #userForm="ngForm">
+
+        <fieldset class="md-form">
+                <mdb-icon fas icon="fingerprint"></mdb-icon>
+            <label>CIN</label>
+            <input  mdbInput mdbValidate type="text" [(ngModel)]="us.cin" class="form-control" name="cin"
+                [(ngModel)]="pattern" #cin="ngModel" [(ngModel)]="us.cin" [(ngModel)]="pattern" #cin="ngModel" class="form-control" [(ngModel)]="us.cin" [(ngModel)]="maxLength" #input="ngModel" [(ngModel)]="minLength"  required maxlength="8" required minlength="8" required [pattern]="'[0-9]*'">
+            <mdb-error *ngIf="cin.invalid && (cin.dirty || cin.touched)">Input invalid</mdb-error>
+            <mdb-success *ngIf="cin.valid && (cin.dirty || cin.touched)">Input valid</mdb-success>
+
+        </fieldset>
+
+
+    
+
+
+        <fieldset class="md-form">
+                <mdb-icon fas icon="user-alt"></mdb-icon>
+            <label>Nom</label>
+            <input mdbInput mdbValidate type="text" [(ngModel)]="us.nom"
+            class="form-control" 
+            name="nom"[(ngModel)]="pattern" #nom="ngModel" required [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" size="10" >
+            <mdb-error *ngIf="nom.invalid && (nom.dirty || nom.touched)">Veuillez fournir un titre valide.</mdb-error>
+            <mdb-success *ngIf="nom.valid && (nom.dirty || nom.touched)">titre valide</mdb-success>
+        
+        </fieldset>
+
+        <fieldset class="md-form">
+                <mdb-icon fas icon="user-alt"></mdb-icon>
+            <label>Prenom</label>
+            <input mdbInput mdbValidate type="text" [(ngModel)]="us.prenom"
+            class="form-control" 
+            name="prenom"[(ngModel)]="pattern" #prenom="ngModel" required [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" size="10">
+            <mdb-error *ngIf="prenom.invalid && (prenom.dirty || prenom.touched)">Veuillez fournir un Prenom valide.</mdb-error>
+            <mdb-success *ngIf="prenom.valid && (prenom.dirty || prenom.touched)">titre valide</mdb-success>
+        
+        </fieldset>
+
+        <fieldset class="md-form">
+                <mdb-icon fas icon="envelope" ></mdb-icon>
+
+                <input mdbInput mdbValidate name="mail" type="email"  class="form-control" [(ngModel)]="us.mail" #mail="ngModel" required pattern="[^ @]*@[^ @]*">
+                <label for="form2">Email </label>
+                <mdb-error *ngIf="input.invalid && (input.dirty || input.touched)">Input invalid</mdb-error>
+                <mdb-success *ngIf="input.valid && (input.dirty || input.touched)">Input valid</mdb-success>
+  
+        </fieldset>
+
+        <fieldset class="md-form">
+           <mdb-icon fas icon="lock" ></mdb-icon>
+            <label>Password</label>
+            <input mdbInput mdbValidate type="text" [(ngModel)]="us.mdp" class="form-control" name="mdp" required="required" #mdp="ngModel">
+        </fieldset>
+
+
+        <fieldset class="md-form">
+                <mdb-icon fas icon="birthday-cake"></mdb-icon>
+            <input type="date" [ngModel]="us.dateDeNaissance| date:'yyyy-MM-dd'"
+                (ngModelChange)="us.dateDeNaissance=$event" class="form-control" name="dateDeNaissance"
+                required="required">
+
+
+        </fieldset>
+
+
+        <fieldset class="md-form">
+                <mdb-icon fas icon="map-marked-alt"></mdb-icon>
+            <label>Adresse</label>
+            <input mdbInput mdbValidate type="text" [(ngModel)]="us.adresse" class="form-control" 
+            name="adresse" [(ngModel)]="pattern" #adresse="ngModel" required [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" size="10">
+            <mdb-error *ngIf="adresse.invalid && (adresse.dirty || adresse.touched)">Veuillez fournir une adresse valide.</mdb-error>
+            <mdb-success *ngIf="adresse.valid && (adresse.dirty || adresse.touched)">Adresse valide</mdb-success>
+        
+        </fieldset>
+
+        <fieldset class="md-form">
+                <mdb-icon fas icon="school"></mdb-icon>
+            <label>Universite</label>
+            <input mdbInput mdbValidate type="text" [(ngModel)]="us.universite" class="form-control" 
+            name="universite" [(ngModel)]="pattern" #universite="ngModel" required [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" size="10">
+            <mdb-error *ngIf="universite.invalid && (universite.dirty || universite.touched)">Veuillez fournir un nom d'université valide.</mdb-error>
+            <mdb-success *ngIf="universite.valid && (universite.dirty || universite.touched)">nom d'université valide</mdb-success>
+        
+        </fieldset>
+        <fieldset class="md-form">
+                <mdb-icon fas icon="graduation-cap"></mdb-icon>
+            <label>Diplome</label>
+            <input mdbInput mdbValidate type="text" [(ngModel)]="us.diplome" class="form-control" 
+            name="diplome" [(ngModel)]="pattern" #diplome="ngModel" required [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" size="10">
+            <mdb-error *ngIf="diplome.invalid && (diplome.dirty || diplome.touched)">Veuillez fournir un nom de Diplome valide.</mdb-error>
+            <mdb-success *ngIf="diplome.valid && (diplome.dirty || diplome.touched)">nom de diplome valide</mdb-success>
+        
+        </fieldset>
+
+       
+
+        <fieldset class="md-form">
+                <mdb-icon fas icon="user-circle"></mdb-icon>
+            <label>Staut</label>
+            <input mdbInput mdbValidate type="text" [(ngModel)]="us.statut" class="form-control" 
+            name="statut" [(ngModel)]="pattern" #statut="ngModel" required [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" size="10">
+            <mdb-error *ngIf="statut.invalid && (statut.dirty || statut.touched)">Veuillez fournir un Statut valide.</mdb-error>
+            <mdb-success *ngIf="statut.valid && (statut.dirty || statut.touched)">Statut valide</mdb-success>
+        
+        </fieldset>
+
+       
+
+        <fieldset class="md-form">
+                <mdb-icon fas icon="walking"></mdb-icon>
+            <label>Type</label>
+            <input mdbInput mdbValidate type="text" [(ngModel)]="us.type" class="form-control" 
+            name="type" [(ngModel)]="pattern" #type="ngModel" required [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" size="10">
+            <mdb-error *ngIf="type.invalid && (type.dirty || type.touched)">Veuillez fournir un Statut valide.</mdb-error>
+            <mdb-success *ngIf="type.valid && (type.dirty || type.touched)">Statut valide</mdb-success>
+        
+        </fieldset>
+     
+        
+        <button  type="submit" class="example hoverable"  class="btn btn-success"> Save </button>
+        <button type="reset" class="example hoverable" class="btn btn-danger">Cancel</button>
+        <button class="example hoverable" routerLink="/users"> <img src="../../assets/images/icons8-back-arrow-40.png"></button>
+
+       
+  
+    </form>
+
+ 
+
+</div>

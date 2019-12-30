@@ -1,0 +1,205 @@
+<html>
+    <nav class="navbar navbar-expand-sm bg- navbar-">
+        <a class="navbar-brand" href="#">
+            <img id="img" class="animated bounce infinite" alt="Brand" src="../../../assets/images/=abc.png">
+          </a>
+      <form class="form-inline" action="">
+        <div class="input-group">
+          <app-search [(searchModel)]="searchModel"></app-search>
+          <div class="input-group-append">
+                <button  class="btnh" type="button">
+                  <i  class="fa fa-search"></i>
+                </button>
+              </div>
+        </div>
+      </form>
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link"   routerLink="/accueil/email">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/clienDoeil" data-toggle="collapse">IdaClub en un clin d'oeil</a>
+          <li class="nav-item">
+            <a class="nav-link"    routerLink="/GestCar"  data-toggle="collapse">Gestion des carriéres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/login" data-toggle="collapse">Déconnexion</a>
+          </li>
+      </ul>
+      </nav>
+<app-sidenav></app-sidenav>
+<body>
+<br>
+<div id="tt">
+    <div class="alert alert-info" role="alert"*ngIf="message">{{message}}</div>
+</div>
+<div class="row">
+  <h1>Back office (IDAC):Liste des Utilisateurs</h1>
+  <div style="padding-bottom: 10px;padding-top: 30px; margin-left: 650px" >  
+    <div class="row">  
+    <div class="col-sm-12">  
+  <button id="export" (click)="ExportTOExcel()" class="btn btn-success">Exporter en Excel</button> </div>  
+    </div>  
+  </div> 
+<div #table >
+<table id="table"  mdbTable mdbTableScroll scrollY="true" hover="true" maxHeight="450" scrollX="true" maxWidth="1050" bordered="true">
+  <thead class="thead-dark" >
+      <tr>
+          <th>index</th>
+          <th>id</th>
+          <th>CIN</th>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Date De Naissance</th>
+          <th>Email</th>
+          <th>Adresse</th>
+          <th>Université</th>
+          <th>Diplome</th>
+          <th>Statut</th>
+          <th>Type</th>
+          <th>image</th>
+          <th>modifier</th>
+          <th>supprimer</th>
+          <th>Voir Sessions</th>
+          <th>Liste Sessions</th>
+
+      </tr>    
+    </thead>
+<tbody *ngFor="let u of users | filter: searchModel ;index as i">
+      <tr  >
+          <td> {{i}}</td>
+
+          <td> {{u.userId}}</td>
+              <td> {{u.cin}}</td>
+              <td>{{u.nom}}</td>
+              <td>{{u.prenom}}</td>
+              <td>{{u.dateDeNaissance|date|uppercase}}</td>
+              <td>{{u.mail}}</td>
+
+              <td>{{u.adresse}}</td>
+              <td>{{u.universite}}</td>
+              <td>{{u.diplome}}</td>
+              <td>{{u.statut}}</td>
+              <td>{{u.type}}</td>
+           <td  style="width:100px;"><img class="img-fluid img-thumbnail" class="test" [src]="images[u.userId-1]" ></td>   
+           <td><button (click)="updateUser(u.userId)"   class="btn btn-primary">Modifier </button></td>
+           <td><button (click)="deleteUser(u.userId)" class="btn btn-danger">Supprimer</button></td>
+           <td >
+           <button type="button" (click)="onGetSessions(u.userId)" mdbBtn class="example hoverable" class="btn btn-success" rounded="true" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
+           mdbWavesEffect>VoirSession</button>
+    <div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog  modal-notify modal-primary" role="document">
+    <!--Content-->
+    <div class="modal-content">
+    <!--Header-->
+    <div class="modal-header">
+    <p class="heading lead">Liste des Sessions pour :{{u.prenom}} </p>
+
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+      <table class="table table-striped"   *ngIf=listSession>
+        <thead class="thead-dark" >
+                  <tr>
+                      <th>Titre</th>
+                      <th>Formation </th>
+                      <th>Nombre d'heures</th>
+                      <th>Effectif</th>   
+                      <th>Prix</th>
+                      <th>Delete</th>
+                  </tr>        
+        </thead>
+        <tbody >
+                  <tr  *ngFor="let s of u.sessions"  >
+                   
+                      <td>{{s.titre}}</td>
+                      <td>{{s.formation}}</td>
+                      <td>{{s.nbreHeures}}</td>
+                      <td>{{s.effectif}}</td>
+                      <td>{{s.prix}}</td>
+                      <td><button (click)="deleteUS(u.userId, s.id)" class="btn btn-danger" >supprimer </button></td>
+                  </tr>
+        </tbody>
+      </table>        
+      </div>
+      <!--Footer-->
+      <!--<div class="modal-footer justify-content-center">
+      <a type="button" mdbBtn color="primary" outline="true" class="waves-effect" mdbWavesEffect (click)="frame.hide()">Non, merci</a>
+      </div>-->
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+  </td>
+<!----modal afficher toute la liste de session--->
+    <td> <button type="button" mdbBtn class="example hoverable" class="btn btn-success" (click)="basicModal.show()" mdbWavesEffect>Ajouter</button>
+
+<div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-primary" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+            <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+
+        <h4 class="modal-title w-100" id="myModalLabel" class="white-text">Ajouter une Session pour :{{u.prenom}}</h4>
+    </div>
+    <div class="modal-body" >
+        
+            <table mdbTable mdbTableScroll  scrollY="true" maxHeight="400" scrollX="true" maxWidth="650"  bordered="true">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Titre</th>
+                            <th>Formation </th>
+                            <th>Nombre d'heure</th>
+                            <th>Effectif</th>
+                            <th>Programme de la formation</th>
+                            <th>Prix</th>
+                            <th>ajouter</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let ss of sessions">
+                            <td>{{ss.titre}}</td>
+                            <td>{{ss.formation}}</td>
+                            <td>{{ss.nbreHeures}}</td>
+                            <td>{{ss.effectif}}</td>
+                            <td>{{ss.programme}}</td>
+                            <td>{{ss.prix}}</td>
+                            <td><button (click)="ajouterSession(u.userId,ss.id)" class="example hoverable" class="btn btn-success" >ajouter</button></td>
+                        </tr>
+                    </tbody>
+            </table>
+</div>
+<!--<div class="modal-footer justify-content-center">
+<button type="button" mdbBtn color="primary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Fermer</button>
+      
+  </div>-->
+  </div>
+</div>
+</div>
+</td> 
+<!-------->
+                   
+
+                    
+                    
+                
+                </tr>
+                  
+        </tbody>
+   
+    </table>
+    </div>
+</div>
+<div >
+        <button id="ajout" (click)="AddUser()" class="example hoverable" class="btn btn-success"  >Ajouter un utilisateur</button>
+    </div>
+
+
+<br>

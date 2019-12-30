@@ -1,0 +1,54 @@
+.navbar {
+    background-color:#084B8A;
+    height:60px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    }
+    img{
+        width:15%;
+        margin-top: -1%;
+    }
+   
+        form{
+            margin-left: -30%;
+        }
+ 
+    a{
+        color: white;
+    }
+.btnh{
+    width:45px;
+    height: 38.5px;
+    border-radius: 1px;
+
+}
+
+
+/* change the brand and text color */
+.navbar- .navbar-brand,
+.navbar- .navbar-text {
+    color: rgba(255,255,255,.8);
+    padding: 0.8rem 1rem;
+}
+/* change the link color and add padding for height */
+.navbar- .navbar-nav .nav-link {
+    padding: 0.5rem 0.5rem;
+}
+/* change the color of active or hovered links */
+.navbar- .nav-item.active .nav-link,
+.navbar- .nav-item:hover .nav-link {
+    background-color: rgb(8, 67, 122); /* add background-color to active links */
+}.navbar- {
+    background-color: #084B8A;
+}
+
+
+/* change the color of active or hovered links */
+.navbar- .nav-item.active .nav-link,
+.navbar- .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+

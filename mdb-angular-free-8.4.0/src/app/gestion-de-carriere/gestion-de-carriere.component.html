@@ -1,0 +1,199 @@
+<html>
+    <nav class="navbar navbar-expand-sm bg- navbar-">
+        <a class="navbar-brand" href="#">
+            <img id="img" class="animated bounce infinite" alt="Brand" src="../../../assets/images/=abc.png">
+          </a>
+      <form class="form-inline" action="">
+        <div class="input-group">
+              <input type="text" class="form-control" placeholder="Rechercher">
+              <div class="input-group-append">
+                <button  class="btnh" type="button">
+                  <i  class="fa fa-search"></i>
+                </button>
+              </div>
+        </div>
+      </form>
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link"   routerLink="/accueil/email">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/clienDoeil" data-toggle="collapse">IdaClub en un clin d'oeil</a>
+          <li class="nav-item">
+            <a class="nav-link"    routerLink="/GestCar"  data-toggle="collapse">Gestion des carriéres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/login" data-toggle="collapse">Déconnexion</a>
+          </li>
+      </ul>
+      </nav>
+<section>
+    <!--Section heading-->
+    <h1 class="py-5 font-weight-bold text-center">Gérer et établir un plan de carrière - Pourquoi ? Comment ?</h1>
+    <!--Section description-->
+    <p class="px-5 mb-5 pb-3 lead grey-text text-center">L'adoption d'un plan de gestion de carrière transforme le dialogue entre l'employeur et l'employé. Ce dernier n'est plus considéré comme un facteur de production, 
+    mais au contraire comme un investissement à faire prospérer.</p>
+    <button id="bt" mdbBtn type="button"  mdbTooltip="Contacter nous" placement="top" color="info" outline="true"  data-toggle="modal" data-target="#basicExample"
+    (click)="frame.show()" mdbWavesEffect>PLUS D’INFORMATIONS?</button>
+     <br>
+    <br>
+    <!--Grid row-->
+    <div class="row">
+    <!--Grid column-->
+          <div class="col-md-4">
+      
+            <!--Grid row-->
+            <div class="row mb-2">
+              <div class="col-2">
+                <mdb-icon fas icon="map-marker-alt" size="2x" class="indigo-text ml-3"></mdb-icon>
+              </div>
+              <div class="col-10 text-left">
+                <h5 class="font-weight-bold">Où vous situez-vous actuellement ?</h5>
+                <p >Avant de déterminer où vous souhaitez aller et quel parcours vous souhaitez emprunter, il vous faut faire le point sur votre situation actuelle. Pour cela, procédez à une auto-évaluation de votre situation professionnelle, votre personnalité,
+                     vos préférences, vos compétences et vos valeurs.</p>
+              </div>
+            </div>
+            <!--Grid row-->
+      
+            <!--Grid row-->
+            <div class="row mb-2">
+              <div class="col-2">
+                <mdb-icon fas icon="flag-checkered" size="2x" class="indigo-text ml-3"></mdb-icon>
+              </div>
+              <div class="col-10 text-left">
+                <h5 class="font-weight-bold">Où souhaitez-vous aller ?</h5>
+                <p >A partir de cette évaluation des compétences et de votre expérience professionnelle, formulez maintenant vos idées sur le type de poste et de secteur qui 
+                  vous intéressent, sous la forme d’un brainstorming</p>
+              </div>
+            </div>
+            <!--Grid row-->
+      
+            <!--Grid row-->
+            <div class="row mb-2">
+              <div class="col-2">
+                <mdb-icon fas icon="search-dollar" size="2x" class="indigo-text ml-3"></mdb-icon>
+              </div>
+              <div class="col-10 text-left">
+                <h5 class="font-weight-bold">Qu’est-ce que vous recherchez dans un emploi ?
+                    </h5>
+                <p > notez toutes les idées qui vous passent par la tête ! Vous devez partir du principe que rien n’est impossible, mais il vous faut rester réaliste et vérifier que vos envies sont à la hauteur de vos compétences, 
+                  et que la réalité économique permette à vos objectifs de se réaliser</p>
+              </div>
+            </div>
+            <!--Grid row-->
+      
+          </div>
+          <!--Grid column-->
+      
+          <!--Grid column-->
+          <div  class="col-md-4 mb-2 center-on-small-only flex-center" >
+            <img  src="../../assets/images/gestCariere.png" alt="" class="img-fluid z-depth-4 rounded">
+            
+        
+            
+        </div>
+        
+          <!--Grid column-->
+      
+          <!--Grid column-->
+          <div class="col-md-4">
+      
+            <!--Grid row-->
+            <div class="row mb-2">
+              <div class="col-2">
+                <mdb-icon fas icon="heart" size="2x" class="indigo-text ml-3"></mdb-icon>
+              </div>
+              <div class="col-10 text-left">
+                <h5 class="font-weight-bold">Quels sont les éléments qui vous motivent ? Qu'aimez-vous faire ?</h5>
+                <p > Vous savez désormais ce qui vous différencie, et ce qui fait votre valeur ajoutée dans le monde professionnel. Ce sont ces points forts qui
+                   vous permettront justement de franchir une nouvelle étape dans votre carrière.</p>
+              </div>
+            </div>
+            <!--Grid row-->
+      
+            <!--Grid row-->
+            <div class="row mb-2">
+              <div class="col-2">
+                <mdb-icon fas icon="award" size="2x" class="indigo-text ml-3"></mdb-icon>
+              </div>
+              <div class="col-10 text-left">
+                <h5 class="font-weight-bold">Quelles sont vos compétences comportementales (soft skills)?
+                    </h5>
+                <p >Il existe un grand nombre de compétences comportementales, c’est d’ailleurs la raison qui nous amène à leur donner différentes appellations : compétences socio-émotionnelles, 
+                  comportementales, cognitives, personnelles, humaines, etc.</p>
+              </div>
+            </div>
+            <!--Grid row-->
+      
+            <!--Grid row-->
+            <div class="row mb-2">
+              <div class="col-2">
+                <mdb-icon fas icon="people-carry" size="2x" class="indigo-text ml-3"></mdb-icon>
+              </div>
+              <div class="col-10 text-left">
+                <h5 class="font-weight-bold">Comment vous y rendre ?
+                    </h5>
+                <p >Vous avez défini votre orientation de carrière et pris les décisions qui s’imposaient ; il vous faut maintenant en déduire le chemin à parcourir, 
+                  les connaissances ou l’expérience à acquérir et le temps nécessaire pour y parvenir.</p>
+              </div>
+            </div>
+            <!--Grid row-->
+      
+          </div>
+          <!--Grid column-->
+      
+        </div>
+        <!--Grid row-->
+      
+      </section>
+      <!--/Section: Features v.4-->
+      </html>
+      
+
+      <div mdbModal #frame="mdbModal" class="modal fade right modal-scrolling" id="frameModalTop" tabindex="-1" role="dialog"
+      aria-labelledby="myModalLabel" aria-hidden="true" [config]="{backdrop: false, ignoreBackdropClick: true}">
+      <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header">
+            <p class="heading">IDA Club</p>
+    
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+    
+          <!--Body-->
+          <div class="modal-body">
+    
+            <div class="row">
+              <div class="col-5">
+                <img src="../../assets/images/nefaa.PNG" class="img-fluid"
+                  alt="">
+              </div>
+    
+              <div class="col-7">
+                <p>
+                  <strong>Nefaa Abid</strong>
+                </p>
+                <p>n'hésitez pas à nous contacter pour toute information [...]</p>
+                
+                <button type="button" mdbBtn  color="blue" class="waves-light" mdbWavesEffect><i class="fab fa-facebook-f left"></i>Facebook</button>
+                <button type="button" mdbBtn color="red" class="waves-light" mdbWavesEffect><i class="fas fa-envelope left"></i>Email</button>
+                <button type="button" mdbBtn color="blue" class="waves-light" mdbWavesEffect><i class="fab fa-linkedin-in left"></i>Linkedin</button>
+        
+ 
+              </div>
+              
+             
+            </div>
+            <p>22 Rue d'Espagne
+                    1000 Tunis tel: 
+                    71 321 213</p>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+    <app-footer></app-footer>

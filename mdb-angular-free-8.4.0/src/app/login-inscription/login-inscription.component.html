@@ -1,0 +1,254 @@
+<html>
+
+<body>
+
+  <div id="header_wrapper">
+    <div id="header">
+      <li id="sitename">
+        <img class="animated bounce infinite" src="../assets/images/sol.png" width="24px">
+        <a href="https://idaformation.com/">IDAC</a>
+      </li>
+      <form (ngSubmit)="!todoform.invalid && basicHandleLogin()" #todoform="ngForm">
+        <li>Identifiant<br><input type="text" name="email" [(ngModel)]="email"></li>
+        <li>Mot de passe<br><input type="password" required="required" name="password" [(ngModel)]="password"><br><a
+            href="">Compte oublié?</a></li>
+        <li><input type="submit" name="login" value="connexion"></li>
+
+      </form>
+
+    </div>
+  </div>
+
+  <div class="msg_bienvenue">
+    <marquee>
+      <span id="contentBox3">
+        &nbsp; &nbsp; &nbsp;
+        مرحبا بكم &nbsp; &nbsp; &nbsp;
+        Bienvenue &nbsp; &nbsp; &nbsp;
+        Samba &nbsp; &nbsp; &nbsp;
+        Marhaba Adjeyé &nbsp; &nbsp; &nbsp;
+        Ol Béssé &nbsp; &nbsp; &nbsp;
+        Dalal ak dian &nbsp; &nbsp; &nbsp;
+        Boyeya Malamou &nbsp; &nbsp; &nbsp;
+        Haouw Bissimila &nbsp; &nbsp; &nbsp;
+        Akawaba &nbsp; &nbsp; &nbsp;
+        مرحبا بكم &nbsp; &nbsp; &nbsp;
+        Bienvenue &nbsp; &nbsp; &nbsp;
+        Samba &nbsp; &nbsp; &nbsp;
+        Marhaba Adjeyé &nbsp; &nbsp; &nbsp;
+        Ol Béssé &nbsp; &nbsp; &nbsp;
+        Dalal ak dian &nbsp; &nbsp; &nbsp;
+        Boyeya Malamou &nbsp; &nbsp; &nbsp;
+        Haouw Bissimila &nbsp; &nbsp; &nbsp;
+        Akawaba &nbsp; &nbsp; &nbsp;
+        مرحبا بكم &nbsp; &nbsp; &nbsp;
+        Bienvenue &nbsp; &nbsp; &nbsp;
+        Samba &nbsp; &nbsp; &nbsp;
+        Marhaba Adjeyé &nbsp; &nbsp; &nbsp;
+        Ol Béssé &nbsp; &nbsp; &nbsp;
+        Dalal ak dian &nbsp; &nbsp; &nbsp;
+
+        Boyeya Malamou &nbsp; &nbsp; &nbsp;
+        Haouw Bissimila &nbsp; &nbsp; &nbsp;
+        Akawaba &nbsp; &nbsp; &nbsp;
+        مرحبا بكم &nbsp; &nbsp; &nbsp;
+        Bienvenue &nbsp; &nbsp; &nbsp;
+        Samba &nbsp; &nbsp; &nbsp;
+        Marhaba Adjeyé &nbsp; &nbsp; &nbsp;
+        Ol Béssé &nbsp; &nbsp; &nbsp;
+        Dalal ak dian &nbsp; &nbsp; &nbsp;
+        Boyeya Malamou &nbsp; &nbsp; &nbsp;
+        Haouw Bissimila &nbsp; &nbsp; &nbsp;
+        Akawaba &nbsp; &nbsp; &nbsp;
+        مرحبا بكم &nbsp; &nbsp; &nbsp;
+        Bienvenue &nbsp; &nbsp; &nbsp;
+        Samba &nbsp; &nbsp; &nbsp;
+        Marhaba Adjeyé &nbsp; &nbsp; &nbsp;
+        Ol Béssé &nbsp; &nbsp; &nbsp;
+        Dalal ak dian &nbsp; &nbsp; &nbsp;
+        Boyeya Malamou &nbsp; &nbsp; &nbsp;
+        Haouw Bissimila &nbsp; &nbsp; &nbsp;
+        Akawaba &nbsp; &nbsp; &nbsp;
+        مرحبا بكم &nbsp; &nbsp; &nbsp;
+        Bienvenue &nbsp; &nbsp; &nbsp;
+        Samba &nbsp; &nbsp; &nbsp;
+        Marhaba Adjeyé &nbsp; &nbsp; &nbsp;
+        Ol Béssé &nbsp; &nbsp; &nbsp;
+        Dalal ak dian &nbsp; &nbsp; &nbsp;
+        Boyeya Malamou &nbsp; &nbsp; &nbsp;
+        Haouw Bissimila &nbsp; &nbsp; &nbsp;
+        Akawaba &nbsp; &nbsp; &nbsp;
+        مرحبا بكم &nbsp; &nbsp; &nbsp;
+
+      </span></marquee>
+  </div>
+
+  <div id="wrapper">
+
+    <div id="div1">
+      <p>Bienvenue à IDAC :)</p><br>
+      <img  id="map" src="../assets/images/Map.png">
+    </div>
+<!----inscrire(userInscr.cin,userInscr.mail,userInscr.prenom,userInscr.nom)-->
+    <form (ngSubmit)="!userForm.invalid && Sinscrire(userInscr.cin,userInscr.mail) " #userForm="ngForm">
+     <div id="div2">
+        <h1>Créer votre compte IDAC</h1>
+        <p>C’est rapide et facile..</p>
+    <fieldset class="md-form">
+          <mdb-icon fas icon="user-alt"></mdb-icon>
+          <input mdbInput mdbValidate type="text" [(ngModel)]="userInscr.prenom" class="form-control" name="prenom"
+            [(ngModel)]="pattern" #prenom="ngModel" required [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" size="10">
+          <label for="form2">Prénom</label>
+
+          <mdb-error *ngIf="prenom.invalid && (prenom.dirty || prenom.touched)">Veuillez entrer un prénom valide.
+          </mdb-error>
+          <mdb-success *ngIf="prenom.valid && (prenom.dirty || prenom.touched)">titre valide</mdb-success>
+
+        </fieldset>
+
+        <fieldset class="md-form">
+          <mdb-icon fas icon="user-alt"></mdb-icon>
+          <input mdbInput mdbValidate type="text" [(ngModel)]="userInscr.nom" class="form-control" name="nom"
+            [(ngModel)]="pattern" #nom="ngModel" required [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" size="10">
+          <label>Nom</label>
+
+          <mdb-error *ngIf="nom.invalid && (nom.dirty || nom.touched)">Veuillez entre un nom valide.</mdb-error>
+          <mdb-success *ngIf="nom.valid && (nom.dirty || nom.touched)">titre valide</mdb-success>
+
+        </fieldset>
+        <fieldset class="md-form">
+          <mdb-icon fas icon="envelope"></mdb-icon>
+
+          <input mdbInput mdbValidate name="mail" type="email" class="form-control" [(ngModel)]="userInscr.mail"
+            #mail="ngModel" required pattern="[^ @]*@[^ @]*">
+          <label for="form2">Email </label>
+          <mdb-error *ngIf="input.invalid && (input.dirty || input.touched)">Entrée non valide</mdb-error>
+          <mdb-success *ngIf="input.valid && (input.dirty || input.touched)">Email valide</mdb-success>
+
+        </fieldset>
+        <fieldset class="md-form">
+          <mdb-icon fas icon="fingerprint"></mdb-icon>
+          <input mdbInput mdbValidate type="text" [(ngModel)]="userInscr.cin" class="form-control" name="cin"
+            [(ngModel)]="pattern" #cin="ngModel" [(ngModel)]="pattern" #cin="ngModel" class="form-control"
+            [(ngModel)]="maxLength" #input="ngModel" [(ngModel)]="minLength" required maxlength="8" required
+            minlength="8" required [pattern]="'[0-9]*'">
+          <label>CIN</label>
+
+          <mdb-error *ngIf="cin.invalid && (cin.dirty || cin.touched)">Entrée non valide</mdb-error>
+          <mdb-success *ngIf="cin.valid && (cin.dirty || cin.touched)">CIN valide</mdb-success>
+
+        </fieldset>
+        <fieldset class="md-form">
+          <mdb-icon fas icon="map-marked-alt"></mdb-icon>
+          <input mdbInput mdbValidate type="text" [(ngModel)]="userInscr.adresse" class="form-control" name="adresse"
+            [(ngModel)]="pattern" #adresse="ngModel" required [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" size="10">
+          <label>Adresse</label>
+
+          <mdb-error *ngIf="adresse.invalid && (adresse.dirty || adresse.touched)">Veuillez entrer une adresse valide.
+          </mdb-error>
+          <mdb-success *ngIf="adresse.valid && (adresse.dirty || adresse.touched)">Adresse valide</mdb-success>
+
+        </fieldset>
+        <fieldset class="md-form">
+          <mdb-icon fas icon="lock"></mdb-icon>
+          <input mdbInput mdbValidate type="password" [(ngModel)]="userInscr.mdp" class="form-control" name="mdp"
+            required="required" #mdp="ngModel">
+          <label>Mot de passe</label>
+
+        </fieldset>
+
+        <fieldset class="md-form">
+          <mdb-icon fas icon="graduation-cap"></mdb-icon>
+          <input mdbInput mdbValidate type="text" [(ngModel)]="userInscr.diplome" class="form-control" name="diplome"
+            [(ngModel)]="pattern" #diplome="ngModel" required [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" size="10">
+          <label>Diplôme</label>
+
+          <mdb-error *ngIf="diplome.invalid && (diplome.dirty || diplome.touched)">Veuillez fournir un nom de diplôme
+            valide.</mdb-error>
+          <mdb-success *ngIf="diplome.valid && (diplome.dirty || diplome.touched)">nom de diplôme valide</mdb-success>
+
+        </fieldset>
+        <fieldset class="md-form">
+          <mdb-icon fas icon="school"></mdb-icon>
+          <input mdbInput mdbValidate type="text" [(ngModel)]="userInscr.universite" class="form-control"
+            name="universite" [(ngModel)]="pattern" #universite="ngModel" required
+            [pattern]="'^[a-zA-Z]+ ?([a-zA-Z0-9]+$){1}'" size="10">
+          <label>Universite</label>
+
+          <mdb-error *ngIf="universite.invalid && (universite.dirty || universite.touched)">Veuillez fournir un nom
+            d'université valide.</mdb-error>
+          <mdb-success *ngIf="universite.valid && (universite.dirty || universite.touched)">nom d'université valide
+          </mdb-success>
+
+        </fieldset>
+        <fieldset>
+          <li>
+
+            <select class="select-css" style="width:193px;" name="statut" [(ngModel)]="userInscr.statut" required>
+              <option value="" disabled>Select Status:</option>
+              <option>Fonctionel</option>
+              <option>Etudiant</option>
+            </select>
+
+            <select class="select-css" name="type" style="width:193px;" [(ngModel)]="userInscr.type"
+              required="required">
+              <option value="" disabled>Select Type:</option>
+              <option>Abonneé</option>
+              <option>Membre</option>
+
+            </select>
+          </li>
+        </fieldset>
+
+        <fieldset class="form-group">
+
+          <mdb-icon fas icon="birthday-cake"></mdb-icon>
+
+          <label>Anniversaire</label>
+          <input type="date" class="form-control" name="dateDeNaissance" required="required"
+            [(ngModel)]="userInscr.dateDeNaissance">
+        </fieldset>
+        <fieldset class="form-group">
+            <mdb-icon fas icon="user-alt"></mdb-icon>
+
+          <label for="file">Photo de profil</label>
+          <input type="file"  accept ="image/*" (change)="OnSelectFile($event)" multiple>
+          <small id="passwordHelpBlock" class="form-text text-muted" >
+            Your Upload doit être en format (png, jpg, jpeg)
+          </small>
+        </fieldset>
+
+        <li><input type="radio">Femme <input type="radio">Homme</li>
+        <li id="terms">En cliquant sur Créer un compte, vous acceptez la politique des données, y compris notre utilisation
+          des cookies. <a href="">nos Conditions</a>.</li>
+        <li><input type="submit" value="Créer un compte"></li>
+        <li><strong style="color: red;" *ngIf="invalidLogin">{{errorMessage}}</strong></li>
+
+      </div>
+    </form>
+  </div>
+</body>
+
+<div id="footer_wrapper">
+
+  <div id="footer1">
+    <strong>IDAF:</strong>Est un centre de formation fondé en 2018, spécialisé dans le domaine du consulting pour les
+    entreprises et des
+    formations continues
+  </div>
+
+
+  <div id="footer2">
+    <a href="">Sign Up</a><a href="">Log In</a><a href="https://idaformation.com/">Informatique</a><a
+      href="https://idaformation.com/">Management</a><a href="https://idaformation.com/">Communication</a><a
+      href="https://idaformation.com/">TeamBuilding</a>
+    <a href="https://idaformation.com/">SMQ selon ISO 9001</a><a href="https://idaformation.com/">Assistance Technique
+    </a><a href="https://idaformation.com/"> Accompagnement QHSE</a><a href="https://idaformation.com/">Assistance en
+      mise à niveau en Tunisie</a><a href="https://idaformation.com/">Préparation à la Certification ISO</a>
+
+  </div>
+
+
+</div>
+
+</html>

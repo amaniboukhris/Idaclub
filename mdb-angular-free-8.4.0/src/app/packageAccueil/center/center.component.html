@@ -1,0 +1,92 @@
+<div class="col-sm-7 card  " id="body">
+  <div class="card-block">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card  text-xs-left">
+          <div class="card-block">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="madiv">
+
+      <div class="col-sm-12">
+        <div *ngFor="let s of sessions" class="card">
+          <div class="card-header">
+              <h4 class="card-title">
+                  <strong> {{s.formation}}</strong>
+                </h4>
+          <div class="card-block">
+
+            <img  class="img-fluid img-thumbnail zoomA" [src]="images[s.id-1]"  style="height:400px;width: 700px;" >
+            <br><br><br><br>
+            <hr>
+            <p class="para">{{s.programme}}</p>
+            
+            <div class="alert alert-light" role="alert"  id="bt">
+              
+              <a class="alert-link"(click)="toggle(s)" >{{s.counter}} Commentaires</a>
+          
+          
+          </div>
+            <div class="card-footer">
+              <button class="btn btn-primary zoomA" (click)="extrait()">S'intéresser <span
+                  class="glyphicon glyphicon-star"></span></button>
+              <button class="btn btn-secondary zoomA" (click)="reserverSession(s.id)"> Réserver <span class="glyphicon glyphicon-plus"></span></button>
+             <!------addCommentToSession-->
+              <button id="comenter" type="button" (click)="addCommentToSession(s.id)" [disabled]="newcomment"
+                 class="btn btn-outline-info btn-rounded  z-depth-0 my-2 waves-effect zoomA">Commenter
+            </button>
+            <!-------->
+              <br />
+              <div class="container">
+              <div class="row">
+                <div class="cardbox-comments ">
+                  <span class="comment-avatar float-left">
+                   <a href=""><img class="rounded-circle zoom" [src]="imageUser" alt="..."></a>                            
+                  </span>
+                    <!------inputmessage-->
+                  <div class="search" >
+                   <input [(ngModel)]="comment.message" placeholder="Ecrire un commentaire..." type="text">
+                   
+                  </div>
+                    <!-------->
+                 </div>
+                 
+                 <ng-container *ngIf="s.show">
+              
+                    <ul class="img-comment-list">
+                        <li *ngFor="let c of s.commentaires">
+                          <div class="comment-img">
+                            <img class="zoomA" [src]="imagesUsers[c.iduser-1]">
+                          </div>
+                          <div class="comment-text">
+                            <strong class="email"><a href="">{{c.email}}</a></strong>
+                            <p>{{c.message}}</p> <span class="date sub-text">{{c.date|date:'HH:mm'}}</span>
+                            <pre><i style="float:right;"  (click)="deletComment(s.id,c.id,c.iduser)"  class="far fa-trash-alt"></i></pre>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="comment-img">
+                          </div>
+                          <div class="comment-text">
+                              <strong><a href=""></a></strong>
+                             
+                            <strong><a href=""></a></strong>
+                            <p></p> <span></span>
+                          </div>
+                        </li>
+                      </ul>
+                   
+                      <ng-template #nocomments>
+                        
+                        <p class="com"></p>
+                      </ng-template>
+                    </ng-container>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>

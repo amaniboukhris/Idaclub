@@ -1,0 +1,409 @@
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color:#08298A;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+	width: 100%;
+	border: 1px solid;
+	border-radius: 5px;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+	background-color: #f44336;
+	border: 1px solid;
+	border-radius: 5px;
+  }
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 35px;
+
+  }
+  
+  /* Avatar image */
+  img.avatar {
+    width: 13%;
+    border-radius: 50%;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+
+
+
+
+  $color_1: white;
+$color_2: #A9BCF5;
+$color_3: #0e385f;
+$color_4: #2E2E2E;
+$color_5: #045FB4;
+$color_6: #424242;
+$color_7: #fff;
+$color_8: #848484;
+$color_9: #365899;
+$color_10: #444;
+$color_11: #222;
+$font_family_1: "lucida grande",tahoma,verdana,arial,sans-serif;
+$font_family_2: helvetica, arial, sans-serif;
+$font_family_3: arial;
+$font_family_4: 'Freight Sans Bold', helvetica, arial, sans-serif;
+$font_family_5: sans-serif;
+$background_color_1: #4c66a4;
+$background_color_2: #084B8A;
+$background_color_3: #69a74e;
+$background_color_4: white;
+$background_color_5: #fff;
+$border_color_1: #3b6e22 #3b6e22 #2c5115;
+$border_color_2: #888;
+$border_color_3: #aaa;
+
+/* ******************************************************************************  */
+$background: #f6f7f8;
+$grey-nuance-lighter: #eeeeee;
+$grey-nuance-darker: #dddddd;
+$fade-grey: #e8e8e8;
+
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: $fade-grey;
+  position: relative;
+  overflow: hidden;
+}
+#header_wrapper {
+	width: 100%;
+	min-width: 980px;
+	background-color: $background_color_1;
+}
+#header {
+	width: 980px;
+	margin: 0px auto;
+	padding: 0px;
+	height: 85px;
+	
+	li {
+		list-style-type: none;
+		float: left;
+		text-align: left;
+		color: $color_1;
+	}
+	#sitename {
+		margin-top: 25px;
+		a {
+			color: $color_1;
+			text-decoration: none;
+			font-size: 30px;
+			font-weight: 900;
+		}
+	}
+	form {
+		margin-top: 15px;
+		float: right;
+		li {
+			font-size: 13px;
+			margin-left: 15px;
+			a {
+				color: $color_2;
+				text-decoration: none;
+			}
+		}
+		input[type="text"] {
+			margin-top: 3px;
+			margin-bottom: 3px;
+			width: 150px;
+			border: 1px solid #08298A;
+			height: 25px;
+			padding-left: 3px;
+		}
+		input[type="password"] {
+			margin-top: 3px;
+			margin-bottom: 3px;
+			width: 150px;
+			border: 1px solid #08298A;
+			height: 25px;
+			padding-left: 3px;
+		}
+		input[type="submit"] {
+			width: 205px;
+			height: 45px;
+			text-align: center;
+			font-size: 19px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			font-family: $font_family_4 !important;
+			font-weight: bold !important;
+			background: linear-gradient(#67ae55, #578843);
+			background-color: $background_color_3;
+			box-shadow: inset 0 1px 1px #a4e388;
+			border-color: $border_color_1;
+			border: 1px solid;
+			border-radius: 5px;
+			color: $color_7;
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			text-shadow: 0 1px 2px rgba(0,0,0,.5);
+		}
+	}
+}
+#wrapper {
+	margin: 0 auto;
+	padding: 0px;
+	text-align: center;
+  width: 980px;
+  border-radius: 25% 10%;
+	div {
+		float: left;
+		font-family: $font_family_2;
+	}
+	#div1 {
+    margin-top: 30px;
+    margin-left:200px ;
+		width: 590px;
+    text-align: left;
+    background-color:white;
+		p {
+			font-size: 20px;
+			font-family: $font_family_3;
+			font-weight: bold;
+			margin: 0px;
+			color: $color_3;
+		}
+	}
+	#div2 {
+		margin-top: 10px;
+		width: 390px;
+		text-align: left;
+		h1 {
+			margin: 0px;
+			font-size: 37px;
+			color: $color_4;
+		}
+		p {
+			font-size: 18px;
+			color: $color_4;
+		}
+		li {
+			list-style-type: none;
+			margin-top: 10px;
+			color: $color_4;
+			font-size: 18px;
+			#firstname {
+				width: 49%;
+			}
+			#surname {
+				margin-left: 2%;
+				width: 49%;
+			}
+			input[type="text"] {
+				width: 100%;
+				height: 40px;
+				border-radius: 5px;
+				padding-left: 10px;
+				font-size: 18px;
+				border: 1px solid #BDBDBD;
+			}
+			input[type="password"] {
+				width: 100%;
+				height: 40px;
+				border-radius: 5px;
+				padding-left: 10px;
+				font-size: 18px;
+				border: 1px solid #BDBDBD;
+			}
+			select {
+				padding: 4px;
+				float: left;
+			}
+			a {
+				margin-left: 10px;
+				width: 150px;
+				color: $color_5;
+				text-decoration: none;
+				font-size: 11px;
+				display: inline-block;
+				vertical-align: middle;
+				line-height: 15px;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			input[type="submit"] {
+				width: 205px;
+				height: 45px;
+				text-align: center;
+				font-size: 19px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				font-family: $font_family_4 !important;
+				font-weight: bold !important;
+				background: linear-gradient(#67ae55, #578843);
+				background-color: $background_color_3;
+				box-shadow: inset 0 1px 1px #a4e388;
+				border-color: $border_color_1;
+				border: 1px solid;
+				border-radius: 5px;
+				color: $color_7;
+				cursor: pointer;
+				display: inline-block;
+				position: relative;
+				text-shadow: 0 1px 2px rgba(0,0,0,.5);
+			}
+		}
+		#terms {
+			color: $color_6;
+			font-size: 11px;
+			a {
+				display: inline;
+				margin: 0px;
+			}
+		}
+		#create_page {
+			color: $color_6;
+			font-size: 13px;
+			font-weight: bold;
+			a {
+				display: inline;
+				margin: 0px;
+				font-size: 13px;
+			}
+		}
+	}
+}
+#footer_wrapper {
+	width: 100%;
+	clear: both;
+	float: left;
+	margin-top: 30px;
+	min-width: 995px;
+	background-color: $background_color_4;
+	text-align: left;
+}
+#footer1 {
+	width: 980px;
+	margin: 0px auto;
+	padding: 0px;
+	border-bottom: 1px solid #E6E6E6;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	color: $color_8;
+	a {
+		color: $color_9;
+		display: inline;
+		margin-left: 10px;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+#footer2 {
+	width: 980px;
+	margin: 0px auto;
+	padding: 0px;
+	font-size: 12px;
+	color: $color_8;
+	a {
+		color: $color_9;
+		display: inline-block;
+		margin: 5px;
+		margin-left: 0px;
+		min-width: 80px;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+#map {
+	margin-left: -70%;
+	margin-top: -12%;
+}
+.select-css {
+	display: block;
+	font-size: 16px;
+	font-family: $font_family_5;
+	font-weight: 700;
+	color: $color_10;
+	line-height: 1.3;
+	padding: .6em 1.4em .5em .8em;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	border-radius: .5em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: $background_color_5;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+	&::-ms-expand {
+		display: none;
+	}
+	&:hover {
+		border-color: $border_color_2;
+	}
+	&:focus {
+		border-color: $border_color_3;
+		box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+		box-shadow: 0 0 0 3px -moz-mac-focusring;
+		color: $color_11;
+		outline: none;
+	}
+	option {
+		font-weight: normal;
+	}
+}
+h3{
+	color: red;;
+}

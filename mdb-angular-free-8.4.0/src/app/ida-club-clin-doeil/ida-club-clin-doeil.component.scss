@@ -1,0 +1,145 @@
+$color_1: white;
+$color_2: #A9BCF5;
+$color_3: #0e385f;
+$color_4: #2E2E2E;
+$color_5: #045FB4;
+$color_6: #424242;
+$color_7: #fff;
+$color_8: #848484;
+$color_9: #365899;
+$color_10: #444;
+$color_11: #222;
+$font_family_1: "lucida grande",tahoma,verdana,arial,sans-serif;
+$font_family_2: helvetica, arial, sans-serif;
+$font_family_3: arial;
+$font_family_4: 'Freight Sans Bold', helvetica, arial, sans-serif;
+$font_family_5: sans-serif;
+$background_color_1: #4c66a4;
+$background_color_2: #084B8A;
+$background_color_3: #69a74e;
+$background_color_4: white;
+$background_color_5: #fff;
+$border_color_1: #3b6e22 #3b6e22 #2c5115;
+$border_color_2: #888;
+$border_color_3: #aaa;
+
+/* ********************************************************************************  */
+$background: #f6f7f8;
+$grey-nuance-lighter: #eeeeee;
+$grey-nuance-darker: #dddddd;
+$fade-grey: #e8e8e8;
+
+
+
+.navbar {
+  background-color:#084B8A;
+  height:60px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    }
+    img{
+        width:15%;
+        margin-top: -1%;
+    }
+   
+        form{
+			margin-left: -30%;
+			background-color: $background_color_1;
+
+        }
+ 
+    a{
+        color: white;
+    }
+.btnh{
+    width:45px;
+    height: 38.5px;
+    border-radius: 1px;
+
+}
+
+
+
+body {
+    font-family: "Lato", sans-serif;
+    background-color:  #f2f2f2;
+
+  }
+  
+
+
+
+
+
+/* ********************************************************************************  */
+
+
+
+#bd {
+    padding: 100px;
+  }
+  
+  h1 {
+    text-align: left;
+    text-transform: uppercase;
+    color: #4CAF50;
+  }
+  
+  p {
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 3px;
+  }
+  #idac{
+    font-size: 50px;
+   
+    color: blue;
+
+  }
+  p>a{
+    color: blue;
+ 
+  }
+ 
+.ii{
+    width: 100%;
+    height: 400px;
+}
+.container{
+padding-top:60px;
+z-index: -1;
+}
+
+body{
+    margin-top: 50px;
+    z-index: 0;
+    position: absolute;
+}
+
+
+/* change the brand and text color */
+.navbar- .navbar-brand,
+.navbar- .navbar-text {
+    color: rgba(255,255,255,.8);
+    padding: 0.8rem 1rem;
+}
+/* change the link color and add padding for height */
+.navbar- .navbar-nav .nav-link {
+    padding: 0.5rem 0.5rem;
+}
+/* change the color of active or hovered links */
+.navbar- .nav-item.active .nav-link,
+.navbar- .nav-item:hover .nav-link {
+    background-color: rgb(8, 67, 122); /* add background-color to active links */
+}.navbar- {
+    background-color: #084B8A;
+}
+
+
+/* change the color of active or hovered links */
+.navbar- .nav-item.active .nav-link,
+.navbar- .nav-item:hover .nav-link {
+    color: #ffffff;
+}

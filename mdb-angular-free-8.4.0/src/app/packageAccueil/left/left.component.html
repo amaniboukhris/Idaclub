@@ -1,0 +1,40 @@
+<div class="col-sm-2 well" id="body">
+    <div class="thumbnail">
+          <div id="calendar-container">
+                  <div id="calendar-header">
+                      <span id="calendar-month-year"></span>
+                  </div>
+                  <div id="calendar-dates">
+                  </div>
+              </div>
+    </div>      
+    <div class="card">
+        <div class="card-block zoom">
+        
+          <table mdbTable mdbTooltip="formaions IDAC" placement="bottom" bordered="true" *ngIf=listSession>
+               <caption style="margin-left: 14%;">Liste des formations</caption> 
+
+                <thead class="bgth" >
+                    <tr>
+                        <th>Titre</th>
+                        <th>Formation</th>
+                        <th>Nombre d'heure</th>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  *ngFor="let s of listSession._embedded.sessions">
+                        <td>{{s.titre}}</td>
+                        <td>{{s.formation}}</td>
+                        <td>{{s.nbreHeures}}hr</td>
+
+            
+                    </tr>
+                </tbody>
+        
+            </table>
+          
+          </div>
+        </div>
+  </div>
+

@@ -1,0 +1,48 @@
+$background_color_1: #f2f2f2;
+
+#body {
+	margin-left: 78%;
+	margin-top: 0.09%;
+	height: 835px;
+	width: 13000px;
+	background-color: $background_color_1;
+	font-family: Apple Chancery, cursive;
+	font-size: 18px;
+
+}
+.card {
+	margin-top: 20%;
+	width:270px;
+	
+
+	
+}
+caption{
+	color: #084B8A;
+	font-weight: bold;
+}
+span{
+	padding: 7px;
+}
+.bgth{
+	background-color: #084B8A;
+}
+th{
+	font-weight: bold;
+	color: white;
+	font-size: 15px;
+
+}
+tr:hover td{ background-color : #d6d7d8; }
+
+
+.zoom  {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  }
+  .zoom:hover {
+	-webkit-transform: scale(1.02);
+	transform: scale(1.02);
+  }

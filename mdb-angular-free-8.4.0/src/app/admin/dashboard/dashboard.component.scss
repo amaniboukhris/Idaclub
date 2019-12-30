@@ -1,0 +1,133 @@
+.card.card-cascade .view.gradient-card-header {
+    padding: 1rem 1rem;
+    text-align: center;
+}
+
+
+
+.blue-gradient {
+    background: -webkit-linear-gradient(50deg, #45cafc, #303f9f);
+    background: linear-gradient(40deg, #45cafc, #4285f4);
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.card.card-cascade {
+    .view {
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15), 0 3px 12px 0 rgba(0, 0, 0, 0.15);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  $background_color_1: #4c66a4;
+  .navbar {
+    background-color:#222;
+    height:60px;
+    position: relative;
+    width: 100%;
+    
+  
+    }
+    #img{
+        width:15%;
+        margin-top: -1%;
+    }
+   
+        form{
+      margin-left: -30%;
+      background-color: $background_color_1;
+  
+        }
+  
+    .nav-link{
+        color: white;
+    }
+  .btnh{
+    width:45px;
+    height: 38.5px;
+    border-radius: 1px;
+  
+  }
+  
+  #admin{
+  float: right;
+  }
+  #admin>strong{
+  color: green;
+  font-size: 20px;
+  
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  body {
+    font-family: "Lato", sans-serif;
+    background-color:  white;
+    overflow-x:hidden;
+    
+   
+  
+  }
+  
+  
+  
+  
+  
+  /* Main content */
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 10px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  #tt{
+  
+    padding-left:14.5%;
+  }
+  
+ h1{
+  text-shadow: 3px 2px;
+  font-weight: bold;
+  font-style: italic;
+ }
+ h4{
+  text-shadow: 1px 0px;
+  font-weight: bold;
+  font-style: italic;
+
+ }
+ a{
+  font-weight: bold;
+  font-style: italic;
+ }
+
+  
+ 
+  
